@@ -26,8 +26,13 @@ def gen_scale_free_graph(quantity):
 
 def gen_powerlaw_cluster_graph(quantity):
     for i in range(0, quantity):
-        nodes = random.randint(10000, 100000)
-        edges = random.randint(1, 5)
+        nodes = 0
+        edges = 0
+        
+        while not (1 <= edges <= nodes):
+            nodes = random.randint(10000, 100000)
+            edges = random.randint(1, 5)
+        
         probability = 0.4
         G = nx.powerlaw_cluster_graph(nodes, edges, probability)
         save_graph(G, 'pc', i)
@@ -44,9 +49,11 @@ def gen_regular_graph(quantity):
     for i in range(0, quantity):
         degree = 1
         nodes = 1
-        while ((degree * nodes) % 2 != 0):
+
+        while not(((degree * nodes) % 2 == 0) and (0 <= degree < nodes)):
             degree = random.randint(1, 10)
             nodes = random.randint(10, 100)
+
         G = nx.random_regular_graph(degree, nodes)
         save_graph(G, 'rg', i)
 
@@ -82,6 +89,7 @@ def gen_ladder_graph(quantity):
 def gen_lognormal_graph(quantity):
     for i in range(0, quantity):
         size = random.randint(1000, 10000)
+        
         while True:
             s = np.random.lognormal(size=size)
             array =[]
