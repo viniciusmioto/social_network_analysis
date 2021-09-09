@@ -1,14 +1,30 @@
-# Synthetic Graph Generator
+# Network Analysis
+
+## Data Frame Creator
+
+### Inputs
+The input is any graph file in *.gexf* format, they must be saved in **graphs** folder
+
+### Properties
+With the graphs of the input, `graphs2csv.py` script will create a *csv* file with the following properties:
+* maximum degree
+* minimum degree
+* density
+* average degree
+* number of vertices that have the maximum degree
+* number of vertices that have the minimum degree
+
+## Synthetic Graph Generator
 
 Script to generate synthetic graphs for my undergraduate research project: Recognizing Power-Law Graphs by Machine Learning Algorithms.
 
-## How to generate the graphs
+### How to generate the graphs
 * Chose one of the functions `gen_<type>_graph` and give the quantity of graphs in the parameter. Those functions will generate graphs from [NetworkX](https://networkx.org/)
 
-## Data files
+### Data files
 * The results will be saved in `data` directory with as a .gexf file
 
-## Types of graphs
+### Types of graphs
 
 * ba: [Barabási-Albert](https://networkx.org/documentation/stable/reference/generated/networkx.generators.random_graphs.barabasi_albert_graph.html)
 * co: [Complete](https://networkx.org/documentation/stable/reference/generated/networkx.generators.classic.complete_graph.html#networkx.generators.classic.complete_graph)
@@ -21,6 +37,6 @@ Script to generate synthetic graphs for my undergraduate research project: Recog
 * rg: [Regular](https://networkx.org/documentation/stable/reference/generated/networkx.generators.random_graphs.random_regular_graph.html#networkx.generators.random_graphs.random_regular_graph)
 * sf: [Scale Free](https://networkx.org/documentation/stable/reference/generated/networkx.generators.directed.scale_free_graph.html#networkx.generators.directed.scale_free_graph)
 
-### Advisors
+### Project Advisors
 * [André Luis Vignatti](https://www.inf.ufpr.br/vignatti/)
 * [Alane Marie de Lima](https://www.inf.ufpr.br/amlima/)
