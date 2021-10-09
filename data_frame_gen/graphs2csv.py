@@ -2,17 +2,20 @@ import networkx as nx
 import statistics as sts
 
 path = './graphs/'
+file_labels = open(path + 'all.Labels')
+lines = file_labels.readlines()
 
 base_features = open('graphs_db.csv',"w")
-base_features.write("max_degree, " +
-					"qtd_max_degree, " +
-			 		"min_degree, " +
-					"qtd_min_degree, " +
-					"avg_degree, " +
-					"density\n")
+base_features.write("max_degree," +
+					"qtd_max_degree," +
+			 		"min_degree," +
+					"qtd_min_degree," +
+					"avg_degree," +
+					"density," +
+					"is_power_law\n")
 
-for i in range(1, 5):
-    file = str(i) + '.gexf'
+for line in lines:
+    file = str(line)[0:-3]
 
     graph = nx.read_gexf(path+file)
     max_degree = max(dict(nx.degree(graph)).values())
@@ -27,7 +30,7 @@ for i in range(1, 5):
     base_features.write(str(min_degree) + ", ")
     base_features.write(str(qtd_min_degree) + ", ")
     base_features.write(str(avg_degree) + ", ")
-    base_features.write(str(density) + "\n")
+    base_features.write(str(density) + ", ")
+    base_features.write(str(line[-2:-1]) + "\n")
 
     del graph
-
