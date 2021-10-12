@@ -6,7 +6,7 @@
 The input is any graph file in *.gexf* format, they must be saved in **graphs** folder
 
 ### Properties
-With the graphs of the input, `graphs2csv.py` script will create a *csv* file with the following properties:
+The `graphs2csv.py` script will create a *csv* file with the following properties of your graphs:
 * maximum degree
 * minimum degree
 * density
