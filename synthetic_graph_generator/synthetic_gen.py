@@ -2,7 +2,7 @@ import networkx as nx
 import numpy as np
 import random
 
-PATH = './data/'
+PATH = './graphs/'
 
 def write_label(type, index, is_power_law):
     with open('graphs.Labels', 'a+') as f:
