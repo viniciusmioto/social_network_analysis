@@ -1,4 +1,4 @@
-# Network Analysis
+# Social Network Analysis
 
 ## Supervised Learning Algorithms
 * K-Nearest Neighbors
