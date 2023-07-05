@@ -1,5 +1,7 @@
 # Social Network Analysis
 
+This project focuses on studying a specific class of graphs known as **Power-Law** graphs, which are prevalent in social networks. Our objective is to employ **Machine Learning** algorithms to effectively detect and analyze these graphs. By leveraging the power of machine learning, we aim to gain deeper insights into the structural characteristics and properties of power-law graphs within social networks. This repository serves as a comprehensive resource to document and share our research findings in this field.
+
 ## Supervised Learning Algorithms
 * K-Nearest Neighbors
 * Support Vector Machines
@@ -12,7 +14,7 @@
 
 ## Types of graphs
 
-### Real World
+### Real World Networks
 
 * amzn: [Amazon Networks](https://snap.stanford.edu/data/amazon-meta.html)
 * caid: [CAIDA AS Relationships Datasets](https://snap.stanford.edu/data/as-caida.html)
@@ -32,7 +34,7 @@
 * infr: [Infrastructure](http://graphdatasets.com/inf.php)
 * ecnm: [Economics](http://graphdatasets.com/econ.php)
 
-### Synthetic
+### Synthetic Graphs
 * ba: [Barabási-Albert](https://networkx.org/documentation/stable/reference/generated/networkx.generators.random_graphs.barabasi_albert_graph.html)
 * co: [Complete](https://networkx.org/documentation/stable/reference/generated/networkx.generators.classic.complete_graph.html#networkx.generators.classic.complete_graph)
 * cy: [Cycle](https://networkx.org/documentation/stable/reference/generated/networkx.generators.classic.cycle_graph.html#networkx.generators.classic.cycle_graph)
